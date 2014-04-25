@@ -3,7 +3,7 @@ To build, you'll need OpENer and libmodbus.
     http://libmodbus.org/
 
 The configure script is lazy and looks for OpENer at the following location:
-../OpENer-master/
+../OpENer/
 
 autoreconf --install (Use this if you don't have a configure script yet)
 ./configure

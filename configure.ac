@@ -17,12 +17,12 @@ AC_CONFIG_MACRO_DIR([m4])
 PKG_CHECK_MODULES([MODBUS], [libmodbus])
 AC_ARG_VAR([CIP_LIBS], [linker flags for OpENer])
 AC_ARG_VAR([CIP_CFLAGS], [C compiler flags for OpENer])
-CIP_CFLAGS="-I\$(top_srcdir)/../OpENer-master/source/src \
-		-I\$(top_srcdir)/../OpENer-master/source/src/cip \
-		-I\$(top_srcdir)/../OpENer-master/source/src/ports/POSIX"
-CIP_LIBS="-L\$(top_srcdir)/../OpENer-master/bin/posix/src/cip -lCIP\
-	-L\$(top_srcdir)/../OpENer-master/bin/posix/src/enet_encap -lENET_ENCAP\
-	-L\$(top_srcdir)/../OpENer-master/bin/posix/src/ports/POSIX \
+CIP_CFLAGS="-I\$(top_srcdir)/../OpENer/source/src \
+	-I\$(top_srcdir)/../OpENer/source/src/cip \
+	-I\$(top_srcdir)/../OpENer/source/src/ports/POSIX/sample_application"
+CIP_LIBS="-L\$(top_srcdir)/../OpENer/bin/posix/src/cip -lCIP\
+	-L\$(top_srcdir)/../OpENer/bin/posix/src/enet_encap -lENET_ENCAP\
+	-L\$(top_srcdir)/../OpENer/bin/posix/src/ports/POSIX \
 		-lPOSIXPLATFORM"
 
 
