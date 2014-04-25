@@ -1,0 +1,25 @@
+To build, you'll need OpENer and libmodbus.
+    https://github.com/EIPStackGroup/OpENer
+    http://libmodbus.org/
+
+The configure script is lazy and looks for OpENer at the following location:
+../OpENer-master/
+
+autoreconf --install (Use this if you don't have a configure script yet)
+./configure
+make
+make install
+
+Settings for LSIS XG5000 software: (www.lsis.com)
+
+EIP block settings:
+    Implicit Client, Exclusive Owner (8 bit), Multicast,
+    T2O data size: PAYLOAD_SIZE, O2T data size: PAYLOAD_SIZE,
+    Config Instance: CONFIG_ASSEMBLY_NUM,
+    Input Instance: INPUT_ASSEMBLY_NUM,
+    Output Instance: OUTPUT_ASSEMBLY_NUM,
+    Transmission period: (as required),
+    Timeout: (as required)
+
+EIP channel settings:
+    Implicit client, Partner port: 2222, Partner IP address: (server_address)
